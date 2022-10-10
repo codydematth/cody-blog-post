@@ -139,3 +139,12 @@ CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 LOGIN_REDIRECT_URL = "blog-home"
 LOGIN_URL = "login"
+
+CKEDITOR_CONFIGS = {
+    "default": {
+        "height": "full",
+        "width": "full",
+        "font-family": "Russo One + sans-serif",
+    },
+}
+DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
