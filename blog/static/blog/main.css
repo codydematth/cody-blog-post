@@ -1,0 +1,207 @@
+
+html {
+  height: 100%;
+  
+}
+body {
+  background: #dde0e0;
+  color: #333333;
+  
+  font-family: sans-serif;
+  min-height: 100%;
+  font-weight: 100;
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #444444;
+}
+
+ul {
+  margin: 0;
+}
+.navbar{
+  
+  font-family: Lobster;
+  font-size: 14px;
+}
+.site-header .nav-link {
+  border-radius: 7px;
+  padding-right: 2px;
+  width: 5em;
+  
+}
+.reg{
+  color: white;
+  border: 2px solid #0079d3;
+  fill: #fff;
+  background-color: #0079d3;
+  fill: white;
+  text-align: center;
+}
+
+.log{
+  border: 2px solid #0079d3;
+  fill: #fff;
+  text-align: center;
+}
+
+.reg:hover {
+  color: #7fbce9;
+  background-color: #7fbce9;
+}
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 7px;
+  margin-bottom: 20px;
+
+}
+
+.article-title {
+  color: #444444;
+}
+
+a.article-title:hover {
+  color: #428bca;
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+}
+
+.article-img {
+  height: 30px;
+  width: 30px;
+  margin-right: 16px;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3
+}
+
+.article-metadata a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.account-img {
+  height: 200px;
+  width: 300px;
+  border: 6px solid #f2f2f2;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+  color: blue;
+}
+.accounts-img {
+  height: 125px;
+  width: 125px;
+  
+}
+.lead{
+  font-size: 25px;
+
+}
+
+.text{
+    font-size: 13px;
+}
+
+@media(max-width: 576px){
+
+    .dropdown-menu{
+        border: none;
+        width: 10%;
+    }
+}
+
+@media(max-width: 768px){
+
+    .account-attributes{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .text{
+        font-size: 11px;
+    }
+
+    .course-title{
+        font-size: 15px;
+    }
+
+    .profile-image{
+        max-width: 300px;
+    }
+}
+@media(min-width: 1000px){
+/*  .card-main{
+    width: 1000px;
+    align-self: center;
+    margin: auto;
+
+  }*/
+    .bottom-card{
+        width: 1000px;
+        align-self: center;
+        margin: auto;
+    }
+}
+.text-error-message{
+  color: red;
+}
+.img-thumbnail{
+  margin-bottom: 0px;
+  height: 50%;
+}
+.profile-edit-button{
+  margin-right: 0px;
+}
+footer {
+  margin-top: auto;
+  padding: 2em;
+  bottom: 0;
+
+}
+
+.fa-facebook{
+  color: blue;
+}
+.fa-twitter{
+  color: lightblue;
+}
+.fa-whatsapp{
+  color:  darkgreen;
+}
+.fa-google-plus{
+  color: darkred;
+}
+.fa-youtube{
+  color: red;
+}
+.social a :hover{
+  color: #d5d5d5;
+}
+.form-control :focus{
+  outline: none;
+  box-shadow: none;
+  border-color: inherit;
+  -webkit-box-shadow: none;
+}

@@ -1,0 +1,24 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<h2 class="text-center">You have been Logged out</h2>
+<div class="content-section col-lg-8 col-sm-12 mx-auto">
+        <form method="POST">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="border-bottom mb-4 text-center">Log In</legend>
+                    {{ form|crispy }}
+                </fieldset>
+                <div class="form-group text-center">
+                    <p><a class="btn btn-outline-primary"href="{% url 'login' %}"> Login</a> </p>
+                </div>
+            
+        </form>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                New Account? <a class="ml-2" href="{% url 'register' %}">Register</a>
+            </small>
+        </div>
+    </div>
+
+{% endblock content %}

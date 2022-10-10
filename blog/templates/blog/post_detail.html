@@ -1,0 +1,44 @@
+{% extends "blog/base.html" %}
+
+{% if messages %}
+            {% for message in messages %}
+              <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+              </div>
+            {% endfor %}
+          {% endif %}
+{% block content %}
+   
+    <article class="media content-section">
+      <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
+      <div class="media-body">
+        <div class="article-metadata">
+          <a style="font-size: 12px; font-family: Lobster;"class="mr-2" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
+          <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
+          {% if object.author == user %}
+            <div>
+              <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' object.id %}">Update</a>
+              <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' object.id %}">Delete</a>
+              
+            </div>
+          {% endif %}
+        </div>
+        <h2><a  style="font-size: 19px; color: darkblue;" class="article-title" href="#">{{ post.title }}</a></h2>
+        <p  style="font-size: 14px;" class="article-content">{{ post.content }}</p>
+      </div>
+    </article>
+      <hr>
+  
+      <div class="main comment-section">
+        
+        {{ comment.count}} <h4 class="display-5" style="color: blue; font-family: Lobster;"> Comment</h4> {{comment|pluralize}}
+        {% for comment in comments %}
+          <blockquote class="blockquote">
+            <p class="mb-0">{{ comment.content}}</p>
+            <footer class="blockquote-footer">by <cite title="Source Title">{{ comment.author|capfirst }}}</cite></footer>
+          </blockquote>
+        }
+        {% endfor%}
+      </div>
+   
+{% endblock content %}
