@@ -90,19 +90,19 @@
 
     <a href="{% url 'blog-home' %}?q=seminar"><span class="d-flex badge ml-1 my-2" style="background-color: #eb3434;">Seminar</span></a>
 
-    <a href="{% url 'blog-home' %}?q=cache"><span class="d-flex badge ml-1 my-2" style="background-color: #eb34d8;">Cache</span></a>
+    <a href="{% url 'blog-home' %}?q=question"><span class="d-flex badge ml-1 my-2" style="background-color: #eb34d8;">Question</span></a>
 
     <a href="{% url 'blog-home' %}?q=computer"><span class="d-flex badge ml-1 my-2" style="background-color: #4286f4;">Computer</span></a>
 
-    <a href="{% url 'blog-home' %}?q=Mechanic"><span class="d-flex badge ml-1 my-2" style="background-color: #00cc66;">Mechanical</span></a>
+    <a href="{% url 'blog-home' %}?q=mathematics"><span class="d-flex badge ml-1 my-2" style="background-color: #00cc66;">Mathematics</span></a>
 
-    <a href="{% url 'blog-home' %}?q=Google"><span class="d-flex badge ml-1 my-2" style="background-color: #1EA362;">Google Maps</span></a>
+    <a href="{% url 'blog-home' %}?q=english"><span class="d-flex badge ml-1 my-2" style="background-color: #1EA362;">English</span></a>
 
-    <a href="{% url 'blog-home' %}?q=django"><span class="d-flex badge ml-1 my-2" style="background-color: #092e20;">Django</span></a>
+    <a href="{% url 'blog-home' %}?q=lecture"><span class="d-flex badge ml-1 my-2" style="background-color: #092e20;">Lecturer</span></a>
 
-    <a href="{% url 'blog-home' %}?q=api"><span class="d-flex badge ml-1 my-2" style="background-color: #004d1a;">API</span></a>
+    <a href="{% url 'blog-home' %}?q=acadamy"><span class="d-flex badge ml-1 my-2" style="background-color: #004d1a;">Academy</span></a>
 
-    <a href="{% url 'blog-home' %}?q=university"><span class="d-flex badge ml-1 my-2" style="background-color: #078209;">University</span></a>
+    <a href="{% url 'blog-home' %}?q=course"><span class="d-flex badge ml-1 my-2" style="background-color: #078209;">Course</span></a>
 
 </div>
 </div>
@@ -137,8 +137,15 @@
                   <a style="font-size: 12px; font-family: Lobster;" class="mr-2" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
                   <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
                 </div>
-                <h2><a style="font-size: 19px; color: darkblue;" class="article-title " href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
-                <p style="font-size: 14px;"class="article-content">{{ post.content|safe }}</p>
+                <h2><a style="font-size: 16px; font-weight: bold;" class="article-title text-primary" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2> 
+                <p style="font-size: 12px;"class="article-content">{{ post.content|safe|truncatechars:200 }}  <span style='font-size: 10px;' class="d-inline"> <a href="{% url 'post-detail' post.id %}">read more</a></span></p> 
+                <div class="image_container py-4">
+      <img
+        src="{{post.post_image.url}}"
+        alt="post_image"
+       style="width: 100%; height: 100%;"
+      />
+    </div>
                  </div>
             </article>
             {% empty %}

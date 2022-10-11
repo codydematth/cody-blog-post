@@ -21,11 +21,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY")
-
+# SECRET_KEY = "-a%!d0!o%&n(o6=ew=_w++9abn!h%v(z-@=o_=$to0um+w-nq$"
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["cody-blog-post.herokuapp.com"]
+# "127.0.0.1",
 
 if DEBUG:
     EMAIL_BACKEND = (
@@ -87,9 +88,9 @@ DATABASES = {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "railway",
         "USER": "postgres",
-        "PASSWORD": "uVHUXy9hWcQqxrAuIJxz",
-        "HOST": "containers-us-west-80.railway.app",
-        "PORT": "5573",
+        "PASSWORD": "xXnm2RMheHKkqLUhS5KT",
+        "HOST": "containers-us-west-84.railway.app",
+        "PORT": "7880",
     }
 }
 
