@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECRET_KEY = "-a%!d0!o%&n(o6=ew=_w++9abn!h%v(z-@=o_=$to0um+w-nq$"
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["127.0.0.1","students-blog-post.up.railway.app"]
 # "127.0.0.1",
@@ -133,6 +133,7 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATIC_DIRS = os.path.join(BASE_DIR, "static")
 STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
